@@ -1,0 +1,7 @@
+_houseLoc = getMarkerPos "realtor" nearObjects ["Land_House_Big_02_F", 50000];
+{
+_hsmrk = createMarkerLocal [format["myMarker_%1",_forEachindex],getPosASL _x];
+_hsmrk setMarkerType "Select";
+} 
+forEach _houseLoc;
+hint str count allMapMarkers;
